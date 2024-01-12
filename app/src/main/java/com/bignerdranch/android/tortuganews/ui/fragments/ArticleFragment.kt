@@ -35,8 +35,8 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
         val article = args.article
         binding.webView.apply {
             webViewClient = WebViewClient() //makes sure that the page will always load
-            //-inside of this webView and don't load in the standart browser of the phone
-            loadUrl(article.url)
+            //-inside of this webView and don't load in the standard browser of the phone
+            article.url?.let { loadUrl(it) }
         }
 
     }
