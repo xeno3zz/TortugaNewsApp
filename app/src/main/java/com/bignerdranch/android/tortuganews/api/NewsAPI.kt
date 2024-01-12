@@ -1,13 +1,14 @@
 package com.bignerdranch.android.tortuganews.api
 
-import com.bignerdranch.android.tortuganews.ui.NewsResponse
+import com.bignerdranch.android.tortuganews.models.NewsResponse
 import com.bignerdranch.android.tortuganews.util.Constants.Companion.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface NewsAPI {
-    //defines single requests we can execute from code
+
+    //defines single API requests we can execute from code
     //1st - get all breaking news
     //we want to get data from our api --> GET request
     @GET("v2/top-headlines")
